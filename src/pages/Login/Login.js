@@ -40,19 +40,20 @@ class Login extends Component {
     });
   };
 
+  // 로그인 테스트하시려면 id: testtest, pw: 123456 으로 해주세요!
   submitLoginInfo = () => {
     fetch("https://westagram-signup.herokuapp.com/login", {
       method: "POST",
-      body: { id: this.state.id, password: this.state.pw },
+      body: JSON.stringify({ id: this.state.id, password: this.state.pw }),
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.msg === "SUCCESS") {
-          localStorage.setItem("accessToken", res.token);
-          this.props.history.push("/main");
-        } else {
-          alert("로그인을 다시 시도해주세요!");
-        }
+        // if (res.msg === "SUCCESS") {
+        //   localStorage.setItem("accessToken", res.token);
+        //   this.props.history.push("/main");
+        // } else {
+        //   alert("로그인을 다시 시도해주세요!");
+        // }
       });
   };
 
