@@ -5,6 +5,7 @@ class Example extends Component {
   render() {
     const name1 = "dohyeon";
     const name2 = "지후";
+    const name3 = "도현";
 
     return (
       <main>
